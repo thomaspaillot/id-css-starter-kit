@@ -11,9 +11,9 @@
 
 // ----- rem ----- //
 
-@function rem($size) {
-    @return #{$size / $base-fontSize}rem;
-}
+// @function rem($size) {
+//     @return #{$size / $base-fontSize}rem;
+// }
 
 // -------------------------------------
 // Mixins
