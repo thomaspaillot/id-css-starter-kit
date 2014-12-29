@@ -18,10 +18,26 @@
 
 // ----- Base Colors ----- //
 
+// Colors
+//
+// This section describes base colors
+
+// Main colors
+//
+// $color-copy - Text color
+// $color-highlight - Highlight color
+// $color-soften - Highlight color softened
+// $color-darken - Highlight color darkened
+//
+// markup:
+// <div style="background: {$modifiers};" class="styleguide-color">{$modifiers}</div>
+//
+// Styleguide 1.0
+
 $color-copy: #464646;
 $color-highlight: #3dc7a6;
-$color-soften: lighten($color-highlight, 40%);
-$color-underline: lighten($color-highlight, 30%);
+$color-soften: tint($color-highlight, 30%);
+$color-darken: shade($color-highlight, 30%);
 
 $tooltip-color: $color-copy;
 

@@ -2,15 +2,23 @@
 //
 // Button
 //
-// -------------------------------------
-// Template
-// -------------------------------------
-//
-// <button class="button" type="button">Button</button>
-//   
-// <a href="#" class="button">Button</a>
-//
 // *************************************
+
+// Buttons
+//
+// Button styles used in the styleguide
+//
+// default - Default button
+// .button--soft - Soft button
+// .button--hard - Hard button
+// :hover - Hover button
+// :active - Active button
+// :focus - Focus button
+//
+// markup:
+// <button class="button {$modifiers}">Button</button>
+//
+// Styleguide 2.0
 
 .button {
 	display: inline-block;
@@ -27,10 +35,18 @@
 	padding-right: 1em;
 	padding-left: 1em;
 	border-radius: 3px;
+	background-color: $color-highlight;
+	color: #fff;
 
 	&, 
 	&:hover {
 		text-decoration: none;
+	}
+
+	&:hover,
+	&:active, 
+	&:focus {
+		background-color: $color-darken;
 	}
 
 	&:active, 
