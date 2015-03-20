@@ -5,10 +5,8 @@ module.exports = function(grunt) {
     pkg: grunt.file.readJSON('package.json'),
     
     watch: {
-      sass: {
-        files: ['assets/**/*.{scss,sass}','assets/modules/**/*.{scss,sass}'],
-        tasks: ['sass:dist']
-      }
+      files: ['assets/**/*.scss'],
+      tasks: ['sass']
     },
     
     sass: {
@@ -16,7 +14,7 @@ module.exports = function(grunt) {
         sourceMap: true,
         outputStyle: 'compressed'
       },
-      dist: {
+      dev: {
         files: {
           'css/style.css': 'assets/style.scss'
         }
@@ -37,7 +35,4 @@ module.exports = function(grunt) {
   });
 
   grunt.registerTask('default', ['browserSync', 'watch']);
-  
-  grunt.loadNpmTasks('grunt-sass');
-  grunt.loadNpmTasks('grunt-contrib-watch');
 };
